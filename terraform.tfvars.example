@@ -1,0 +1,13 @@
+project_name    = "pocghactions"
+environment     = "dev"
+location        = "eastus"
+
+# Gratis: Windows + F1. Si prefieres Linux, usa os_type = "Linux" y app_service_sku = "B1".
+os_type         = "Windows"
+app_service_sku = "F1"
+
+tags = {
+  project = "poc-githubactions"
+  managed = "terraform"
+  owner   = "carlos"
+}
