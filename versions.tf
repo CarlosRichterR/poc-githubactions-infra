@@ -21,6 +21,12 @@ terraform {
 
 provider "azurerm" {
   features {}
-  # Subscription: usa `az login` + `az account set --subscription ...`
-  # o ARM_SUBSCRIPTION_ID / ARM_CLIENT_ID en CI.
+  # En suscripciones nuevas el default registra docenas de providers (lento / se cuelga).
+  # Solo registramos lo que usa este POC: App Service + Storage.
+  resource_provider_registrations = "none"
+  resource_providers_to_register = [
+    "Microsoft.Web",
+    "Microsoft.Storage",
+  ]
+  # Subscription: `az login` + `az account set --subscription ...`
 }
