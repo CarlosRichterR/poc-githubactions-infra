@@ -1,8 +1,9 @@
 project_name    = "pocghactions"
 environment     = "dev"
-location        = "eastus"
+location        = "westus2"
 
-# Gratis: Windows + F1. Si prefieres Linux, usa os_type = "Linux" y app_service_sku = "B1".
+# F1 = gratis. Si falla por cuota 0, probá otra region (eastus a veces bloquea PayG nuevas).
+# B1 ~= USD 13/mes prorrateado.
 os_type         = "Windows"
 app_service_sku = "F1"
 
